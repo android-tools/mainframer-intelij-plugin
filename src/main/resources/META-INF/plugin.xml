@@ -21,10 +21,15 @@
     <!-- uncomment to enable plugin in all products
     <depends>com.intellij.modules.lang</depends>
     -->
+    <depends>org.jetbrains.plugins.gradle</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <configurationType implementation="com.elpassion.intelijidea.MFRunConfigurationType"/>
         <programRunner implementation="com.elpassion.intelijidea.MFProgramRunner"/>
+    </extensions>
+
+    <extensions defaultExtensionNs="org.jetbrains.plugins.gradle">
+        <taskManager implementation="com.elpassion.intelijidea.MFGradleTaskManager"/>
     </extensions>
 
 </idea-plugin>
